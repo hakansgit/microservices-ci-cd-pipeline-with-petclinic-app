@@ -11,5 +11,5 @@
   - name: deploy the app stack on swarm
     shell: "docker stack deploy --with-registry-auth -c /home/ec2-user/docker-compose-swarm-dev-tagged.yml {{ app_name }}"
     register: output
-​
+  
   - debug: msg="{{ output.stdout }}"
