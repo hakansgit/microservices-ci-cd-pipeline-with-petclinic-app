@@ -1,4 +1,4 @@
-namespace: "petclinic-staging-ns"
+namespace: "staging"
 bases:
 - ../base
 patches:
