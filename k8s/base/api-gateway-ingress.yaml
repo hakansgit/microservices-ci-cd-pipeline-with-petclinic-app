@@ -17,7 +17,7 @@ spec:
       - petclinic.selimsan.com
       secretName: petclinic-tls
   rules:
-    - host: petclinic003.clarusway.us
+    - host: petclinic.selimsan.com
       http:
         paths:
           - backend:
