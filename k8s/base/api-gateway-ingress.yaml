@@ -6,13 +6,18 @@ metadata:
     kompose.image-pull-secret: regcred
     kompose.service.expose: petclinic.selimsan.com
     kompose.version: 1.22.0 (955b78124)
+    cert-manager.io/cluster-issuer: "letsencrypt-prod"
   creationTimestamp: null
   labels:
     io.kompose.service: api-gateway
   name: api-gateway
 spec:
+  tls:
+    - hosts:
+      - petclinic.selimsan.com
+      secretName: petclinic-tls
   rules:
-    - host: petclinic.selimsan.com
+    - host: petclinic003.clarusway.us
       http:
         paths:
           - backend:
